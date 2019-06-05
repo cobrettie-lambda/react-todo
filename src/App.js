@@ -15,8 +15,16 @@ constructor() {
         task: "Become a software engineer",
         id: Date.now(),
         completed: false
+      },
+      // create new Todo
+      {
+        task: "Master React",
+        id: Date.now(),
+        completed: false
       }
     ],
+    // Adding state
+    // todo = "";
 
   }
 }
