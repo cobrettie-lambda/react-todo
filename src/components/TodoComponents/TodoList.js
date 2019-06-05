@@ -4,18 +4,16 @@ import React from 'react';
 import '../TodoComponents/Todo.css';
 import Todo from '../TodoComponents/Todo'
 
-const TodoList = props => {
+const ToDoList = props => {
     return (
         <div>
-            {props.taskList.map((item, i) => (
-                <div className="todo" key={i}>
-                    <Todo 
-                    item={item}
-                    handleEventFinish={props.handleEventFinish} />
-                </div>
-            ))}
+            {
+                props.todos.map( todo => (
+                    <ToDo />
+                ))
+            }
         </div>
     );
 };
 
-export default TodoList;
+export default ToDoList;
