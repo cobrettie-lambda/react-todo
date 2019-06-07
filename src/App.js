@@ -45,23 +45,18 @@ changeTodo = event => {
   });
 }
 
-toggleCompleted = id => {
-  // console.log("id", id);
-  let todos = this.state.todos;
-  const newTodos = todos.map(todo => {
-    console.log("todo.id", todo.id);
-    if (id === todo.id) {
-      todo.completed = !todo.completed;
-      return todo;
-    } else {
-      return todo;
-    }
-  });
-
-  this.setState({
-    todos: newTodos
-  });
-}
+toggleComplete = id => {
+    let todos = this.state.todos.slice();
+    todos = todos.map(todo => {
+      if (todo.id === id) {
+        todo.completed = !todo.completed;
+        return todo;
+      } else {
+        return todo;
+      }
+    });
+    this.setState({ todos });
+  };
 
   render() {
     return (
