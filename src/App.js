@@ -2,6 +2,7 @@ import React from 'react';
 import ToDoForm from './components/TodoComponents/TodoForm';
 import ToDoList from './components/TodoComponents/TodoList';
 
+
 class App extends React.Component {
   // you will need a place to store your state in this component.
   // design `App` to be the parent component of your application.
@@ -40,3 +41,45 @@ constructor() {
 }
 
 export default App;
+
+
+
+
+// addTodo = event => {
+//   event.preventDefault();
+//   let todos = this.state.todos;
+//   todos.push(this.state.todo);
+//   console.log("todos", todos);
+//   this.setState({
+//     todos: todos,
+//     todo: {...this.state.todo,
+//     task: "" } 
+//   });
+// }
+
+
+// changeTodo = event => {
+//   console.log("this.state.todo"); 
+//   this.setState({
+//     todo: {...this.state.todo,
+//       task: event.target.value }
+//   });
+// }
+
+// toggleCompleted = id => {
+//   console.log("id", id);
+//   let todos = this.state.todos;
+//   const newTodos = todos.map(todo => {
+//     console.log("todo.id", todo.id);
+//     if (id === todo.id) {
+//       todo.completed = !todo.completed;
+//       return todo;
+//     } else {
+//       return todo;
+//     }
+//   });
+
+//   this.setState({
+//     todos: newTodos
+//   });
+// }
