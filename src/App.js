@@ -38,8 +38,15 @@ addTodo = event => {
   this.setState({ todos, todo: ''});
 }
 
+// changing todo items on list
+changeTodo = event => {
+  this.setState({
+    [event.target.name]: event.target.value
+  });
+}
+
 toggleCompleted = id => {
-  console.log("id", id);
+  // console.log("id", id);
   let todos = this.state.todos;
   const newTodos = todos.map(todo => {
     console.log("todo.id", todo.id);
