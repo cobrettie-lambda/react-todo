@@ -45,6 +45,7 @@ changeTodo = event => {
   });
 }
 
+// toggle completed items from list
 toggleComplete = id => {
     let todos = this.state.todos.slice();
     todos = todos.map(todo => {
@@ -58,14 +59,28 @@ toggleComplete = id => {
     this.setState({ todos });
   };
 
+// clear completed items from list
+  clearCompletedTodos = event => {
+  event.preventDefault();
+  let todos = this.state.todos.slice();
+  todos = todos.filter(todo => !todo.completed);
+  this.setState({ todos });
+}
+
   render() {
     return (
       <div>
         <ToDoList 
+          handleToggleComplete={this.toggleComplete}
           todos={this.state.todos} 
-          toggleCompleted={props.toggleCompleted}
           />
-        <ToDoForm />
+
+        <ToDoForm 
+          value={this.state.todo}
+          handleTodoChange={this.changeTodo}
+          handleAddTodo={this.addTodo}
+          handleClearCompleted={this.clearCompletedTodos}
+        />
       </div>
     );
   }
