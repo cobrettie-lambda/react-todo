@@ -90,6 +90,7 @@ export default App;
 
 
 
+// Notes from help channel zoom
 
 // addTodo = event => {
 //   event.preventDefault();
