@@ -41,8 +41,7 @@ addTodo = event => {
 // changing todo items on list
 changeTodo = event => {
   this.setState({
-    [event.target.name]: event.target.value
-  });
+    [event.target.name]: event.target.value});
 }
 
 // toggle completed items from list

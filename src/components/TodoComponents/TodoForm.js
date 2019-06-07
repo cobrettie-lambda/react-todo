@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ToDoForm = props => {
-    console.log("props in ToDoForm");
+    // console.log("props in ToDoForm");
     return (
         <form>
             <input 
