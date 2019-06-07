@@ -79,7 +79,7 @@ toggleComplete = id => {
           value={this.state.todo}
           handleTodoChange={this.changeTodo}
           handleAddTodo={this.addTodo}
-          handleClearCompleted={this.clearCompletedTodos}
+          handleClearComplete={this.clearCompletedTodos}
         />
       </div>
     );

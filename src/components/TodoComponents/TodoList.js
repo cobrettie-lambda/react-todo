@@ -11,7 +11,7 @@ const ToDoList = props => {
             {
                 props.todos.map( todo => (
                     <Todo 
-                        toggleCompleted={props.toggleCompleted}
+                        handleToggleComplete={props.handleToggleComplete}
                         todo={todo}
                     />
                 ))
