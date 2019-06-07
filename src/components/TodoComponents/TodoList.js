@@ -10,7 +10,10 @@ const ToDoList = props => {
         <div>
             {
                 props.todos.map( todo => (
-                    <Todo task={todo.task} />
+                    <Todo 
+                        toggleCompleted={props.toggleCompleted}
+                        todo={todo}
+                    />
                 ))
             }
         </div>

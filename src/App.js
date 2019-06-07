@@ -30,10 +30,31 @@ constructor() {
   }
 }
 
+toggleCompleted = id => {
+  console.log("id", id);
+  let todos = this.state.todos;
+  const newTodos = todos.map(todo => {
+    console.log("todo.id", todo.id);
+    if (id === todo.id) {
+      todo.completed = !todo.completed;
+      return todo;
+    } else {
+      return todo;
+    }
+  });
+
+  this.setState({
+    todos: newTodos
+  });
+}
+
   render() {
     return (
       <div>
-        <ToDoList todos={this.state.todos} />
+        <ToDoList 
+          todos={this.state.todos} 
+          toggleCompleted={props.toggleCompleted}
+          />
         <ToDoForm />
       </div>
     );
