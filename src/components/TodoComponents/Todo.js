@@ -16,6 +16,7 @@ import React from 'react';
 //   return (
 //     <div key={props.todo.completed}
 //     onClick={() => props.toggleCompleted(props.todo.id)}
+// style={props.todo.completed ? { textDecoration: 'line-through' } : null}
 //     {props.todo.task}
 //     </div>
 // );
