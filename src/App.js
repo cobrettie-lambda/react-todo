@@ -30,6 +30,14 @@ constructor() {
   }
 }
 
+// adding item to todo list
+addTodo = event => {
+  event.preventDefault();
+  const todos = this.state.todos.slice();
+  todos.push({task: this.state.todo, completed: false, id: Date.now() });
+  this.setState({ todos, todo: ''});
+}
+
 toggleCompleted = id => {
   console.log("id", id);
   let todos = this.state.todos;
